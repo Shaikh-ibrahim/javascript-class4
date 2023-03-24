@@ -1,0 +1,19 @@
+<!-- Make a page in html with a button on clicking which current date and time is displayed -->
+<html>
+    <body>
+        Hello My Name Is Shaikh Ibrahim !
+        <p id="p"></p>
+        <button type="button" onclick="func()">Click Me</button>
+    </body>
+    <script>
+        function func(){
+            const date = new Date();
+            const d = date.getDate();
+            const m = date.getMonth() + 1;
+            const y = date.getFullYear();
+            const time = date.toLocaleTimeString();
+            var s = d + "/" + m + "/" + y + " " + time;
+            document.getElementById("p").innerHTML = s;
+        }
+    </script>
+</html>
